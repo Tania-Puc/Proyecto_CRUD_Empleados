@@ -3,10 +3,16 @@ const mysql=require('mysql');
 
 const conexion=mysql.createConnection(
     {
+        host:'mysql.db4free.net',
+        user: 'estadiama',
+        password:'gZX3uWyt$4-tf7Y',
+        database:'proyectestadia20',
+        /*
         host:'localhost',
         user: 'root',
         password:'contraseña123',
         database:'crud_empleados',
+        */
     }
 );
 
