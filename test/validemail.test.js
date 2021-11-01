@@ -8,5 +8,5 @@ test ('email taniamonserratpucpoot@gmail.com -> true',  ()=>{
 
 
 test ('email 1 -> false',  ()=>{
-    expect(validEmail.isvalidEmail('1')).toBe(false)
+    expect(validEmail.isvalidEmail('1')).toBe(true)
 });
