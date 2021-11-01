@@ -2,7 +2,7 @@
 //validar correo
 const validEmail =require('./validemail');
 
-test ('email taniapucpoot@gmail.com -> true',  ()=>{
+test ('email taniamonserratpucpoot@gmail.com -> true',  ()=>{
     expect(validEmail.isvalidEmail('taniapuc@gmail.com')).toBe(true)
 });
 
