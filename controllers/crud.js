@@ -8,8 +8,8 @@ exports.save=(req,res)=>{
     const fecha_ingreso=new Date()
 
 
-    
-    conexion.query('INSERT INTO empleados SET?',{nombre:nombre, correo:correo, fecha_ingreso:fecha_ingreso}, (error,result)=>{
+    /*INSERTAR EMPLEADOS */
+    conexion.query('INSERT  INTO  empleados  SET?',{nombre:nombre, correo:correo, fecha_ingreso:fecha_ingreso}, (error,result)=>{
 
         if(error){
             console.log(error);
@@ -19,9 +19,7 @@ exports.save=(req,res)=>{
          
         }
     })
-
-    //console.log(correo+nombre+fecha_ingreso);
-
+   
 }
 
 exports.update=(req,res)=>{
@@ -31,7 +29,7 @@ exports.update=(req,res)=>{
     const fecha_ingreso=req.body.fecha_ingreso;
     
     console.log(fecha_ingreso);
-    conexion.query("UPDATE `empleados` SET ? WHERE `empleados`.`id_empleado` = ?",[{nombre:nombre,correo:correo, fecha_ingreso:fecha_ingreso},id_empleado], (error,results)=>{
+    conexion.query("UPDATE  `empleados` SET ?   WHERE `empleados`.`id_empleado` = ?",[{nombre:nombre,correo:correo, fecha_ingreso:fecha_ingreso},id_empleado], (error,results)=>{
 
         if(error){
             console.log(error);
