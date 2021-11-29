@@ -7,6 +7,8 @@ const conexion=mysql.createConnection(
         user: 'estadiama',
         password:'gZX3uWyt$4-tf7Y',
         database:'proyectestadia20',
+        
+        //Conexion Local de prueba
         /*
         host:'localhost',
         user: 'root',

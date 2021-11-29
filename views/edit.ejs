@@ -45,7 +45,7 @@
                     <input id= "id_empleado" name="id_empleado" value="<%= empleados.id_empleado %>"hidden>
                       <div class="mb-3">
                           <label for="nombre" class="form-label">Nombre</label>
-                          <input type="text" class="form-control" id="nombre" name="nombre" value="<%= empleados.nombre %>">
+                          <input type="text" class="form-control" id="nombre" name="nombre" value="<%= empleados.nombre %>" >
                       </div>
                       <div class="mb-3">
                         <label for="correo" class="form-label">Correo</label>
@@ -55,7 +55,8 @@
                       
                       <div class="mb-3">
                           <label for="fecha_ingreso" class="form-label">Fecha de ingreso</label>
-                          <input type="date" id="fecha_ingreso" class="form-control" name="fecha_ingreso" value="<%= empleados.fehca_ingreso%>" />
+                          <input type="date" name="fecha_ingreso" class="form-control" id="fecha_ingreso" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="<%= empleados.fecha_ingreso%>"/>
+
                       </div>
                 
   
@@ -73,7 +74,6 @@
 
 
       <!-- Optional JavaScript; choose one of the two! -->
-    
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
