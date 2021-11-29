@@ -10,7 +10,7 @@ const conexion=require('./database/db');
 router.get('/', (req,res)=>{
 
     //'SELECT * FROM `empleados` WHERE `fecha_ingreso`>= CURDATE()'
-    conexion.query('SELECT id_empleado, nombre, correo, date_format(fecha_ingreso, "%d-%m-%Y") as fecha_ingreso from empleados', (error,results)=>{
+    conexion.query('SELECT id_empleado, nombre, correo, date_format(fecha_ingreso, "%d %M %Y") as fecha_ingreso from empleados', (error,results)=>{
                 
         if(error){
             throw error;
