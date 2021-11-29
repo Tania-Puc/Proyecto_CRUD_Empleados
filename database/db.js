@@ -3,6 +3,7 @@ const mysql=require('mysql');
 
 const conexion=mysql.createConnection(
     {
+        /*Cuenta almacenada en un hosting */
         host:'mysql.db4free.net',
         user: 'estadiama',
         password:'gZX3uWyt$4-tf7Y',
@@ -10,6 +11,7 @@ const conexion=mysql.createConnection(
         
         //Conexion Local de prueba
         /*
+        Cuenta cuando está en local
         host:'localhost',
         user: 'root',
         password:'contraseña123',
