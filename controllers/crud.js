@@ -39,12 +39,15 @@ exports.update=(req,res)=>{
     })
 }
 
+
+//Generador del pdf
+
+
 exports.getpdf = (req, res) => {
     const id_empleado = req.body.id_empleado;
     const nombre = req.body.nombre;
     const correo = req.body.correo;
     const fecha_ingreso = req.body.fecha_ingreso;
-
     var doc = new PDF({ bufferPages: true });
     const filename = `InfoEmpleado${nombre}.pdf`;
     const stream = res.writeHead(200, {
@@ -75,10 +78,7 @@ exports.getpdf = (req, res) => {
         .text('A QUIEN CORRESPONDA:', {
             align: 'left',
         });
-
     jumpLine(doc, 3)
-
-
     doc.font('fonts/NotoSansJP-Regular.otf')
     .fontSize(12).fill('#021c27')
     .text('Por medio de la presente y para los fines que pretenda el interesado, hago de su conocimiento que recomiendo al ',
@@ -121,7 +121,7 @@ exports.getpdf = (req, res) => {
      .text('Tania Monserrar Puc Poot', startLine2, signatureHeight + 5, {
          columns: 1.2,
          columnGap: 0.2,
-         height: 40.2,
+         height: 40.5,
          width: lineSize,
          align: 'center',});
          jumpLine(doc, 1)
