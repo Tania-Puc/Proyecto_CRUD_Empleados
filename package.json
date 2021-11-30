@@ -2,17 +2,21 @@
   "name": "crudempleados",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "jest": "^27.3.1",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.12",
+    "pdfkit": "^0.13.0",
     "timeago.js": "^4.0.2"
   }
 }
