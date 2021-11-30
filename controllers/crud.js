@@ -9,20 +9,15 @@ exports.save=(req,res)=>{
     const fecha_ingreso=new Date()
 
 
-
     conexion.query('INSERT INTO empleados SET?',{nombre:nombre, correo:correo, fecha_ingreso:fecha_ingreso}, (error,result)=>{
 
         if(error){
             console.log(error);
-
         }else{
             res.redirect('/');
-
         }
     })
-
     //console.log(correo+nombre+fecha_ingreso);
-
 }
 
 exports.update=(req,res)=>{
@@ -44,7 +39,9 @@ exports.update=(req,res)=>{
     })
 }
 
+
 //Generador del pdf
+
 
 exports.getpdf = (req, res) => {
     const id_empleado = req.body.id_empleado;
@@ -65,7 +62,6 @@ exports.getpdf = (req, res) => {
         }
     }
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#fff');
-
 
     doc
         .font('fonts/NotoSansJP-Bold.otf')
@@ -110,10 +106,8 @@ exports.getpdf = (req, res) => {
      jumpLine(doc, 15)
      doc.lineWidth(1);
      const lineSize = 200;
-     const signatureHeight = 700;
-     
+     const signatureHeight = 700;    
      doc.fillAndStroke('#021c27');
-     
      const endLine1 = 5 + lineSize;
      const startLine2 = endLine1 + 5;
      const endLine2 = startLine2 + lineSize;
@@ -134,7 +128,7 @@ exports.getpdf = (req, res) => {
          doc.font('fonts/NotoSansJP-Light.otf')
          .fontSize(10)
          .fill('#021c27')
-         .text('Universidad Tecnologica Metropolitana', startLine2, signatureHeight + 20, {
+         .text('Universidad Tecnológica Metropolitana', startLine2, signatureHeight + 20, {
              columns: 1,
              continued:true,
              columnGap: 0,
