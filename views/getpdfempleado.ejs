@@ -33,9 +33,7 @@
         </div>
       </nav>
       <% if (empleados){ %>
-
         <div class="container ">
-   
           <div class="card mt-md-5  ">
               <div class="card-header text-center">
                 GENERAR INFORME EMPLEADO
@@ -50,19 +48,14 @@
                       <div class="mb-3">
                         <label for="correo" class="form-label">Correo</label>
                         <input type="email" class="form-control" id="correo" name="correo" value= "<%= empleados.correo%>" readonly>
-                      </div>
-
-                      
+                      </div>             
                       <div class="mb-3">
                         <label for="fecha_ingreso" class="form-label">Fecha de ingreso</label>
                         <input type="text" class="form-control" id="fecha_ingreso" name="fecha_ingreso" value= "<%= empleados.fecha_ingreso%>" readonly>
                       </div>
-  
                       <button type="submit" class="btn btn-success">Confirmar y Generar PDF</button>
                       <a href="/" class="btn btn-secondary">Cancelar</a>
-                    </form>
-                    
-              
+                    </form>        
               </div>
             </div>
         </div>
