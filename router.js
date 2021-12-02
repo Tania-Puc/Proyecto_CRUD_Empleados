@@ -21,8 +21,7 @@ router.get('/', (req,res)=>{
         }
     })
     
-}
-)
+})
 
 //RUTA PARA CREAR EMPLEADOS
 router.get('/create', (req,res)=>{
