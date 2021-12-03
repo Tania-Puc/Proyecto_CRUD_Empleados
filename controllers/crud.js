@@ -128,7 +128,7 @@ exports.getpdf = (req, res) => {
          doc.font('fonts/NotoSansJP-Light.otf')
          .fontSize(10)
          .fill('#021c27')
-         .text('Universidad Tecnológica Metropolitana', startLine2, signatureHeight + 20, {
+         .text('UTM', startLine2, signatureHeight + 20, {
              columns: 1,
              continued:true,
              columnGap: 0,
